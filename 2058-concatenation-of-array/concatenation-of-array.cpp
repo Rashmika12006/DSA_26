@@ -2,16 +2,16 @@ class Solution {
 public:
     vector<int> getConcatenation(vector<int>& nums) {
         int n=nums.size();
-        vector<int>ans;
+        int x=2*n;
+        vector<int>ans(x);
 
         for(int i=0;i<n;i++)
         {
-            ans.push_back(nums[i]);
+            ans[i]=nums[i];
+            ans[i+n]=nums[i];
+            
         }
-         for(int i=0;i<n;i++)
-        {
-            ans.push_back(nums[i]);
-        }
+       
      return ans;
     }
 };
